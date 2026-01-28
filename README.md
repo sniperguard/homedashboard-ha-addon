@@ -14,7 +14,7 @@ Connect your HomeDashboard app to your local Home Assistant from anywhere - no p
 
 1. Click the button above, or manually add this repository URL in Home Assistant:
    ```
-   https://github.com/AmpelTech/homedashboard-ha-addon
+   https://github.com/sniperguard/homedashboard-ha-addon
    ```
 
 2. Install the "HomeDashboard Relay" add-on
@@ -28,5 +28,5 @@ Connect your HomeDashboard app to your local Home Assistant from anywhere - no p
 
 ## Support
 
-- [Report issues](https://github.com/AmpelTech/homedashboard-ha-addon/issues)
+- [Report issues](https://github.com/sniperguard/homedashboard-ha-addon/issues)
 - [HomeDashboard App](https://apps.apple.com/app/homedashboard)

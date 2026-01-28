@@ -2,7 +2,7 @@ name: "HomeDashboard Relay"
 description: "Connect HomeDashboard app to your local Home Assistant from anywhere"
 version: "1.0.0"
 slug: "homedashboard_relay"
-url: "https://github.com/AmpelTech/homedashboard-ha-addon"
+url: "https://github.com/sniperguard/homedashboard-ha-addon"
 arch:
   - amd64
   - aarch64
@@ -18,4 +18,4 @@ schema:
   pairing_code: str
 startup: services
 boot: auto
-image: "ghcr.io/ampeltech/homedashboard-relay-{arch}"
+image: "ghcr.io/sniperguard/homedashboard-relay-{arch}"

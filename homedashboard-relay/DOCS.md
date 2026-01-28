@@ -75,5 +75,5 @@ Get a new code from the HomeDashboard app. Codes expire after 15 minutes.
 
 ## Support
 
-- [GitHub Issues](https://github.com/AmpelTech/homedashboard-ha-addon/issues)
+- [GitHub Issues](https://github.com/sniperguard/homedashboard-ha-addon/issues)
 - [HomeDashboard Support](https://sniper-guard.com/contact)
