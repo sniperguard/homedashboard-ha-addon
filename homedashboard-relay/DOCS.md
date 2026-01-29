@@ -1,6 +1,6 @@
-# HomeDashboard Relay
+# AI for Home Assistant - Cloud Relay
 
-Connect your HomeDashboard iOS app to your local Home Assistant from anywhere, without port forwarding or Nabu Casa.
+Connect your AI for Home Assistant iOS app to your local Home Assistant from anywhere, without port forwarding or Nabu Casa.
 
 ## How It Works
 
@@ -20,42 +20,38 @@ Your iPhone          Relay Server           This Add-on
 
 ## Setup
 
-### Step 1: Get a Pairing Code
+### One-Tap Setup (Recommended)
+
+If you're running Home Assistant OS or Supervised:
 
 1. Open the **HomeDashboard** app on your iPhone
 2. Go to **Settings** > **[Your Connection]** > **Remote Access**
-3. Select **HomeDashboard Relay** and tap **Set Up**
-4. Copy the 6-character pairing code (valid for 15 minutes)
+3. Select **HomeDashboard Relay** and tap **Set Up Relay**
+4. The app will automatically install and configure this add-on
 
-### Step 2: Configure the Add-on
+That's it! The app handles everything automatically.
 
-1. Enter the pairing code in the **Configuration** tab
-2. Click **Save**
+### Manual Setup
 
-### Step 3: Start the Add-on
+If automatic setup isn't available:
 
-1. Go to the **Info** tab
-2. Click **Start**
-3. Check the **Log** tab to verify connection
-
-### Step 4: Complete Setup in App
-
-1. Return to the HomeDashboard app
-2. Tap **Check Connection**
-3. Once connected, tap **Done**
+1. Install this add-on from the repository
+2. Get your User ID from the AI for Home Assistant app (Settings > Remote Access)
+3. Enter the User ID in the **Configuration** tab
+4. Click **Save** and **Start**
 
 ## Configuration
 
 | Option | Description |
 |--------|-------------|
-| `pairing_code` | 6-character code from the HomeDashboard app |
+| `user_id` | Your HomeDashboard user ID (set automatically by the app) |
 
-The pairing code is only needed once. After initial pairing, the add-on will automatically reconnect.
+The user ID is set once during setup. After that, the add-on will automatically reconnect.
 
 ## Troubleshooting
 
-### "Pairing code required"
-Get a new code from the HomeDashboard app. Codes expire after 15 minutes.
+### "User ID required"
+Set up the relay from the AI for Home Assistant app, which will configure the user ID automatically.
 
 ### "Connection failed"
 - Check your internet connection

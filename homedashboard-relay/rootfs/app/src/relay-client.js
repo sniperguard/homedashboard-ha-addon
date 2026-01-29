@@ -12,40 +12,12 @@ class RelayClient {
     }
 
     async start() {
-        // If no userId saved, validate pairing code first
         if (!this.userId) {
-            await this.validatePairing();
+            throw new Error('No user ID configured. Set up relay from HomeDashboard app.');
         }
 
+        console.log('[Relay] User ID:', this.userId.substring(0, 8) + '...');
         this.connect();
-    }
-
-    async validatePairing() {
-        if (!config.pairingCode) {
-            throw new Error('No pairing code configured. Set PAIRING_CODE environment variable.');
-        }
-
-        console.log('[Relay] Validating pairing code...');
-
-        const httpUrl = config.relayUrl.replace('wss://', 'https://').replace('ws://', 'http://');
-        const response = await fetch(`${httpUrl}/pairing/validate`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ pairingCode: config.pairingCode })
-        });
-
-        if (!response.ok) {
-            const error = await response.json();
-            throw new Error(`Pairing failed: ${error.error}`);
-        }
-
-        const data = await response.json();
-        this.userId = data.userId;
-
-        // Save userId for reconnection
-        config.userId = this.userId;
-
-        console.log('[Relay] Pairing successful, userId:', this.userId.substring(0, 8) + '...');
     }
 
     connect() {
